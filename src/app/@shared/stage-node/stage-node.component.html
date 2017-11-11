@@ -1,5 +1,5 @@
 <div class="stage-node c">
-    <span>{{stage.name}}</span>
+    <a routerLink="/f/{{stage.flowId}}/{{stage._id}}">{{stage.name}}</a>
     <app-new-stage [parent]="stage"></app-new-stage>
     
     <div class="stages c">

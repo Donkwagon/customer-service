@@ -1,4 +1,4 @@
-<div class="page" *ngIf="flow">
+<div class="page r" *ngIf="flow">
 
     <div class="content-wrapper c">
         <div class="flow-thumb c" >
@@ -11,5 +11,8 @@
         <div class="stages c">
             <app-new-stage [parent]="flow"></app-new-stage>
         </div>
+    </div>
+    <div class="f1">
+        <router-outlet></router-outlet>
     </div>
 </div>

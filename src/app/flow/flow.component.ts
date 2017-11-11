@@ -20,6 +20,8 @@ export class FlowComponent implements OnInit {
 
   stages: Stage[];
 
+  selectedStage: Stage[];
+
   constructor(
     private route: ActivatedRoute,
     private flowService: FlowService,

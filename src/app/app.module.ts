@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { FlowComponent } from './flow/flow.component';
 import { StageNodeComponent } from './@shared/stage-node/stage-node.component';
 import { NewStageComponent } from './@shared/new-stage/new-stage.component';
+import { StageEditorComponent } from './stage-editor/stage-editor.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NewStageComponent } from './@shared/new-stage/new-stage.component';
     HomeComponent,
     FlowComponent,
     StageNodeComponent,
-    NewStageComponent
+    NewStageComponent,
+    StageEditorComponent
   ],
   imports: [
     BrowserModule,
