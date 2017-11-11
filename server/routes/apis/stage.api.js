@@ -18,8 +18,8 @@ stage.get("", function(req, res) {
   });
 });
 
-stage.get("/exchange/:exchange", function(req, res) {
-  db.collection(stage_COLLECTION).find({exchange: req.params.exchange}).limit(100).toArray(function(err, docs) {
+stage.get("/flow/:flowId", function(req, res) {
+  db.collection(stage_COLLECTION).find({flowId: req.params.flowId}).limit(100).toArray(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get stages.");
     } else {

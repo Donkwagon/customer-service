@@ -3,6 +3,9 @@
         <span><b>{{flow.name}}</b></span>
         <span>{{flow.description}}</span>
     </div>
+    <div class="c">
+        <span *ngFor="let stage of stages">{{stage | json}}</span>
+    </div>
 
     <form class="c">
         <input class="app-input" [(ngModel)]="newStage.name" placeholder="new custorm flow stage" name="stageName"/>

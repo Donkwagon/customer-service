@@ -25,8 +25,8 @@ export class StageService {
                 .catch(this.handleError);
   }
 
-  getStagesByUser(id): Promise<Stage[] | void> {
-    return this.http.get(this.url + '/u/' + id)
+  getStagesByFlow(flowId): Promise<Stage[] | void> {
+    return this.http.get(this.url + '/flow/' + flowId)
                 .toPromise()
                 .then(response => response.json() as Stage[])
                 .catch(this.handleError);
