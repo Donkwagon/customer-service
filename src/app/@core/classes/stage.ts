@@ -1,6 +1,12 @@
-class Stage {
+export class Stage {
     id: string;
+    parentId: string;
 
-    constructor() {
+    name: string;
+    description: string;
+    content: string;
+
+    constructor(parentId) {
+        this.parentId = parentId;
     }
 }
