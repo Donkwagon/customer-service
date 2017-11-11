@@ -21,7 +21,7 @@ server.listen(process.env.PORT || 8080, function (err) {
 
 //////////////////////////////////////////
 //Connect to mongoose db
-var MongoDbConStr = "mongodb://donkw:shiyichangjiyizhiyi@ds243295.mlab.com:43295/heroku_2571rp0q";
+var MongoDbConStr = "mongodb://donkw:donkw@ds155315.mlab.com:55315/heroku_37qvp4zk";
 global.db = mongoose.createConnection(MongoDbConStr);
 //////////////////////////////////////////
 

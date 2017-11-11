@@ -5,8 +5,8 @@ const router = express.Router();
 const flow =   require('./apis/flow.api');
 router.use('/flow', flow);
 
-const node =   require('./apis/node.api');
-router.use('/node', node);
+const stage =   require('./apis/stage.api');
+router.use('/stage', stage);
 
 const rep =   require('./apis/rep.api');
 router.use('/rep', rep);
