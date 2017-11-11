@@ -1,4 +1,5 @@
 <div class="button" *ngIf="!display" (click)="formDisplay()">+ Create New Stage</div>
+<br>
 <form class="c" *ngIf="parent && display">
     <input class="app-input" [(ngModel)]="newStage.name" placeholder="new custorm flow stage" name="stageName"/>
     <br>

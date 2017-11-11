@@ -20,6 +20,7 @@ $font-stack: "Lato";
 body{
     font-family: $font-stack;
     background-color:#eee;
+    color:#222;
 }
 
 .app-input, textarea{
@@ -38,11 +39,17 @@ body{
 form{
     padding:1rem;
     background-color:white;
+    border:#eee solid 1px;
 }
 
 .flow-thumb{
     padding:1rem;
     background-color:white;
+
+    .thumb-title{
+        font-size:1.5rem;
+        font-weight:800;
+    }
 }
 
 .page{

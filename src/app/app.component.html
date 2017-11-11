@@ -9,7 +9,7 @@
         </form>
         <div class="c">
             <a class="flow-thumb c" *ngFor="let flow of flows" routerLink="/f/{{flow._id}}">
-                <span><b>{{flow.name}}</b></span>
+                <span class="thumb-title"><b>{{flow.name}}</b></span>
                 <span>{{flow.description}}</span>
             </a>
         </div>
