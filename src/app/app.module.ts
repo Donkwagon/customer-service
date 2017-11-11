@@ -12,17 +12,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StageComponent } from './stage/stage.component';
 import { HomeComponent } from './home/home.component';
+import { FlowComponent } from './flow/flow.component';
+import { StageNodeComponent } from './@shared/stage-node/stage-node.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StageComponent,
-    HomeComponent
+    HomeComponent,
+    FlowComponent,
+    StageNodeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    AppRoutingModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy }

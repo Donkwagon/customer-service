@@ -19,9 +19,31 @@ $font-stack: "Lato";
 
 body{
     font-family: $font-stack;
+    background-color:#eee;
 }
 
-.app-input{
+.app-input, textarea{
     font-size:1rem;
     padding:0.5rem 0.5rem;
+
+    border:#aaa solid 1px;
+    border-radius:3px;
+
+    &:focus{
+        outline:none;
+        border:black solid 1px;
+    }
+}
+
+form{
+    margin:0 auto;
+    padding:1rem;
+    max-width:900px;
+    background-color:white;
+}
+
+.flow-thumb{
+    padding:1rem;
+    margin:0.5rem;
+    background-color:white;
 }
