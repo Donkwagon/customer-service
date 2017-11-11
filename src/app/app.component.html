@@ -5,15 +5,36 @@
             <br>
             <textarea placeholder="flow description"   [(ngModel)]="newFlow.description" name="description" id="" cols="30" rows="10"></textarea>
             <br>
-            <button (click)="createFlow()">Create Flow</button>
+            <div class='button -green center'(click)="createFlow()">Create Flow</div>
         </form>
         <div class="c">
             <a class="flow-thumb c" *ngFor="let flow of flows" routerLink="/f/{{flow._id}}">
                 <span class="thumb-title"><b>{{flow.name}}</b></span>
-                <span>{{flow.description}}</span>
+                <span class="thumb-description">{{flow.description}}</span>
             </a>
         </div>
     </div>
     <router-outlet></router-outlet>
-    
+
+<!-- 
+    <div class='container'>
+        <div class="button-container">
+            <div class='button -regular center'>Let's start</div>
+            
+            <div class='button -dark center'>Touch me</div>
+            
+            <div class='button -green center'>Just like that</div>
+            
+            <div class='button -blue center'>And that, oh, yeah</div>
+                
+            <div class='button -salmon center'>Now that I like</div>
+            
+            <div class='button -sun center'>God, that's so nice</div>
+            
+            <div class='button -alge center'>Now lower down</div>
+            
+            <div class='button -flower center'>Where the figs lie</div>
+            
+        </div>
+    </div> -->
 </div>
