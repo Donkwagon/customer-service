@@ -18,7 +18,6 @@ export class FlowComponent implements OnInit {
 
   flow: Flow;
 
-  newStage: Stage;
   stages: Stage[];
 
   constructor(
@@ -33,7 +32,6 @@ export class FlowComponent implements OnInit {
       this.id = params['id'];
       this.getFlow(this.id);
       this.getStagesByFlow(this.id);
-      this.newStage = new Stage(this.id, this.id); // new stage needs parent id
     });
   }
 
@@ -42,14 +40,6 @@ export class FlowComponent implements OnInit {
       if (res) {
         console.log(res);
         this.flow = res;
-      }
-    });
-  }
-
-  createStage() {
-    this.stageService.createStage(this.newStage).then(res => {
-      if (res) {
-        console.log(res);
       }
     });
   }

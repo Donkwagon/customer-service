@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Stage } from './../../@core/classes/stage';
 
 @Component({
   selector: 'app-stage-node',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StageNodeComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  stage: any;
+
+  constructor(
+  ) {
+  }
 
   ngOnInit() {
   }

@@ -1,17 +1,10 @@
-<div class="page">
+<div class="page" *ngIf="flow">
     <div class="flow-thumb c" >
         <span><b>{{flow.name}}</b></span>
         <span>{{flow.description}}</span>
     </div>
     <div class="c">
-        <span *ngFor="let stage of stages">{{stage | json}}</span>
+        <app-stage-node *ngFor="let stage of stages" [stage]="stage"></app-stage-node>
     </div>
-
-    <form class="c">
-        <input class="app-input" [(ngModel)]="newStage.name" placeholder="new custorm flow stage" name="stageName"/>
-        <br>
-        <textarea placeholder="stage description"   [(ngModel)]="newStage.description" name="stageDescription" id="" cols="30" rows="10"></textarea>
-        <br>
-        <button (click)="createStage()">Create Flow</button>
-    </form>
+    <app-new-stage [parent]="flow"></app-new-stage>
 </div>
