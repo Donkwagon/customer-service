@@ -1,6 +1,6 @@
 export class Flow {
 
-    id: string;
+    _id: string;
     name: string;
     description: string;
 

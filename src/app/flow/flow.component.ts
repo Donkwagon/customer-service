@@ -45,7 +45,7 @@ export class FlowComponent implements OnInit {
   }
 
   getStagesByFlow(flowId) {
-    this.stageService.getStagesByFlow(flowId).then(res => {
+    this.stageService.getStagesByParent(flowId).then(res => {
       if (res) {
         console.log(res);
         this.stages = res;

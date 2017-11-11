@@ -1,6 +1,6 @@
 class Rep {
-    id: string;
-
+    _id: string;
+    
     constructor() {
     }
 }

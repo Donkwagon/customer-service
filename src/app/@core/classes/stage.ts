@@ -1,5 +1,5 @@
 export class Stage {
-    id: string;
+    _id: string;
     flowId: string;
     parentId: string;
 
@@ -8,8 +8,6 @@ export class Stage {
     content: string;
 
     constructor(parent) {
-        console.log("...");
-        console.log(parent);
         this.parentId = parent._id;
         if (!parent.flowId) { // parent is flow, which doesn't have a flow id
             this.flowId = parent._id;

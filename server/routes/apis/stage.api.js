@@ -18,8 +18,8 @@ stage.get("", function(req, res) {
   });
 });
 
-stage.get("/flow/:flowId", function(req, res) {
-  db.collection(stage_COLLECTION).find({flowId: req.params.flowId}).limit(100).toArray(function(err, docs) {
+stage.get("/parent/:parentId", function(req, res) {
+  db.collection(stage_COLLECTION).find({flowId: req.params.parentId}).limit(100).toArray(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get stages.");
     } else {
@@ -29,7 +29,7 @@ stage.get("/flow/:flowId", function(req, res) {
 });
 
 
-stage.get("/symbol/:symbol", function(req, res) {
+stage.get("/parent/:parentId", function(req, res) {
   db.collection(stage_COLLECTION).findOne({symbol: req.params.symbol}, function(err, doc) {
     if (err) {
       handleError(res, err.message, "Failed to get stages.");

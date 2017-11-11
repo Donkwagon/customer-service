@@ -1,5 +1,5 @@
 class Team {
-    id: string;
+    _id: string;
 
     constructor() {
     }
