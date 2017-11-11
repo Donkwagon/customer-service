@@ -2,13 +2,13 @@
 
     <div class="content-wrapper c">
         <div class="flow-thumb c" >
-            <span><b>{{flow.name}}</b></span>
-            <span>{{flow.description}}</span>
+            <span class="flow-title"><b>{{flow.name}}</b></span>
+            <span class="flow-description">{{flow.description}}</span>
         </div>
-        <div class="c">
+        <div class="stage-node c">
             <app-stage-node *ngFor="let stage of stages" [stage]="stage"></app-stage-node>
         </div>
-        <div class="stages-wrapper c">
+        <div class="stages c">
             <app-new-stage [parent]="flow"></app-new-stage>
         </div>
     </div>

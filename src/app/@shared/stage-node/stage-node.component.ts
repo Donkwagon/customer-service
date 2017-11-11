@@ -17,6 +17,7 @@ export class StageNodeComponent implements OnInit {
   constructor(
     private stageService: StageService
   ) {
+    this.stages = [];
   }
 
   ngOnInit() {
@@ -26,7 +27,6 @@ export class StageNodeComponent implements OnInit {
   getSubStages(parentId) {
     this.stageService.getStagesByParent(parentId).then(res => {
       if (res) {
-        console.log(res);
         this.stages = res;
       }
     });

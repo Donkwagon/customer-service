@@ -19,7 +19,7 @@ stage.get("", function(req, res) {
 });
 
 stage.get("/parent/:parentId", function(req, res) {
-  db.collection(stage_COLLECTION).find({flowId: req.params.parentId}).limit(100).toArray(function(err, docs) {
+  db.collection(stage_COLLECTION).find({parentId: req.params.parentId}).limit(100).toArray(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get stages.");
     } else {

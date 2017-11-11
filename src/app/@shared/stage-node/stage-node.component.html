@@ -1,9 +1,8 @@
 <div class="stage-node c">
     <span>{{stage.name}}</span>
-    <span>{{stage.description}}</span>
-    <span>{{stage.content}}</span>
     <app-new-stage [parent]="stage"></app-new-stage>
-    <div class="c">
+    
+    <div class="stages c">
         <app-stage-node [stage]="stage" *ngFor="let stage of stages"></app-stage-node>
     </div>
 </div>
