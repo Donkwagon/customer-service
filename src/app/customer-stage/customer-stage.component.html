@@ -1,3 +1,10 @@
-<p>
-  customer-stage works!
-</p>
+<div class="page">
+  <div class="stage-c c" *ngFor="let stage of stages">
+    <span class="stage-title">
+      {{stage.name}}
+    </span>
+    <span class="stage-description">
+      {{stage.description}}
+    </span>
+  </div>
+</div>

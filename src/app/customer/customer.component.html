@@ -1,5 +1,6 @@
 <div class="page c">
-  <div class="flow-c c" *ngFor="let flow of flows">
+  <a class="flow-c c" routerLink="/c/{{flow._id}}" *ngFor="let flow of flows">
     <span class="flow-title">{{flow.name}}</span>
-  </div>
+  </a>
 </div>
+<router-outlet></router-outlet>
