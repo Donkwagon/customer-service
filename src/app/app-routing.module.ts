@@ -10,6 +10,7 @@ import { FlowComponent } from './flow/flow.component';
 import { StageComponent } from './stage/stage.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerStageComponent } from './customer-stage/customer-stage.component';
+import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -19,7 +20,10 @@ const routes: Routes = [
   ]},
   { path: 'c', component: CustomerComponent, children: [
     { path: ':stageId', component: CustomerStageComponent}
-  ]}
+  ]},
+
+  { path: ':code', component: AuthCallbackComponent}
+
 ];
 
 @NgModule({

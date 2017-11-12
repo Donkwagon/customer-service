@@ -26,6 +26,8 @@ body{
     color:#222;
 }
 
+*{flex-shrink: 0;}
+
 .app-input, textarea{
     font-size:1rem;
     padding:0.5rem 0.5rem;
@@ -203,8 +205,8 @@ form{
 
 
 .page-cover{
-  align-items:center;
-  padding:2rem;
+  //align-items:center;
+  padding:1rem 1rem;
   background-color:#ddd;
   
 }

@@ -1,21 +1,38 @@
-<div class="page">
-
-  <div class="page-cover c">
-    <h1>Customer Service Centre</h1>
-    <span>Air Canada</span>
-  </div>
-  <div class="stage-c c" *ngFor="let stage of stages">
-    <span class="stage-title">
-      {{stage.name}}
-    </span>
-    <span class="stage-description">
-      {{stage.description}}
-    </span>
-    <div [innerHTML]="stage.content">
+<div class="page c">
+  <div class="c f1 ofys">
+    <div class="page-cover c">
+      <span>Customer Service Centre</span>
+      <h1 *ngIf="stage">{{stage.name}}</h1>
+      <h1 *ngIf="flow && !stage">{{flow.name}}</h1>
+      <span>Air Canada</span>
     </div>
-  </div>
-
-  <div class="omni-channel-wrapper">
     
+    <a routerLink="/c/{{stage._id}}" class="stage-c c" *ngFor="let stage of stages">
+      <span class="stage-title">
+        {{stage.name}}
+      </span>
+      <span class="stage-description">
+        {{stage.description}}
+      </span>
+      <div [innerHTML]="stage.content">
+      </div>
+    </a>
+  
+
+  </div>
+  <div class="omni-channel-wrapper c">
+    <div class="msg-wrapper f1 c">
+      <div class="msg-in r">
+        <div class="rep-image">
+          <img src="https://images.forbes.com/media/lists/companies/air-canada_416x416.jpg"/>
+        </div>
+        <div class="msg-content f1">
+            here is a piece of msg
+        </div>
+      </div>
+    </div>
+    <div class="input-panel">
+      <input placeholder="type in your message"/>
+    </div>
   </div>
 </div>

@@ -17,6 +17,8 @@ export class CustomerStageComponent implements OnInit {
   sub: any;
   stageId: string;
 
+  stage: Stage;
+  flow: Flow;
   stages: Stage[];
 
   constructor(
@@ -26,11 +28,31 @@ export class CustomerStageComponent implements OnInit {
   ) {
     this.sub = this.route.params.subscribe(params => {
       this.stageId = params['stageId'];
+      this.getStage(this.stageId);
+      this.getFlow(this.stageId);
       this.getSubStages(this.stageId);
     });
   }
 
   ngOnInit() {
+  }
+
+  getStage(id) {
+    this.stageService.getStage(id).then(res => {
+      if (res) {
+        console.log(res);
+        this.stage = res;
+      }
+    });
+  }
+
+  getFlow(id) {
+    this.flowService.getFlow(id).then(res => {
+      if (res) {
+        console.log(res);
+        this.flow = res;
+      }
+    });
   }
 
 

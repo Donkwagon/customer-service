@@ -3,6 +3,7 @@
     padding:1rem;
     background-color:white;
     margin:auto;
+    border-bottom:#eee solid 1px;
     
     .stage-title{
         font-size:1.5rem;
@@ -11,5 +12,53 @@
 
 .omni-channel-wrapper{
     background-color:#ccc;
-    padding:2rem;
+    padding:2rem 0 0 0;
+    height:200px;
+}
+
+.msg-wrapper{
+    padding:1rem;
+
+    .rep-image{
+        overflow:hidden;
+        margin-right:0.5rem;
+        img{
+            width:2rem;height:2rem;
+            
+            border-radius:2rem;
+    
+        }
+    }
+    
+    .msg-in{
+        align-self:flex-start;
+    
+        .msg-content{
+    
+            border:#eee solid 1px;
+            background-color:white;
+            padding:0.3rem 1rem;
+            border-radius:1rem;
+        }
+    }
+    
+    
+
+}
+
+
+.input-panel{
+
+    input{
+        font-size:1rem;
+        padding:1rem 1rem;
+        border:none;
+        width:100%;
+        border-top:#eee solid 1px;
+        border-bottom:#eee solid 1px;
+        
+        &:focus{
+            outline:none;
+        }
+    }
 }
