@@ -1,17 +1,27 @@
 var express =         require("express");
 var bodyParser =      require("body-parser");
 var mongoose =        require('mongoose');
-var http =            require('http');
+var fs = require('fs');
+
+var forceSsl = require('express-force-ssl');
+var https = require('https');
+var key = fs.readFileSync('server.key');
+var cert = fs.readFileSync( 'server.crt' );
+var options = {
+    key: key,
+    cert: cert
+  };
 
 //////////////////////////////////////////
 //Initialize app and start express server
 var app = express();
+app.use(forceSsl);
 app.use(bodyParser.json());
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
-const server = http.createServer(app);
+const server = https.createServer(options, app);
 
 server.listen(3000, function (err) {
     if (err) {console.log(err);process.exit(1);}
