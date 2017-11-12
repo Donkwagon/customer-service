@@ -39,6 +39,13 @@ export class StageService {
                 .catch(this.handleError);
   }
 
+  updateStage(stage: Stage): Promise<Stage | void> {
+    return this.http.put(this.url + '/' + stage._id, stage)
+                .toPromise()
+                .then(response => response.json() as Stage)
+                .catch(this.handleError);
+  }
+
   private handleError (error: any) {
     const errMsg = (error.message) ? error.message :
     error.status ? `${error.status} - ${error.statusText}` : 'Server error';
