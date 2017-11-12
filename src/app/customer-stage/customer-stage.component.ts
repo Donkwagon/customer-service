@@ -21,6 +21,9 @@ export class CustomerStageComponent implements OnInit {
   flow: Flow;
   stages: Stage[];
 
+  newMessage: any;
+  messages: any[];
+
   constructor(
     private route: ActivatedRoute,
     private flowService: FlowService,
@@ -31,10 +34,17 @@ export class CustomerStageComponent implements OnInit {
       this.getStage(this.stageId);
       this.getFlow(this.stageId);
       this.getSubStages(this.stageId);
+      this.messages = [];
     });
   }
 
   ngOnInit() {
+
+    this.newMessage = {
+      type: 'out',
+      content: ''
+    };
+
   }
 
   getStage(id) {
@@ -62,6 +72,17 @@ export class CustomerStageComponent implements OnInit {
         this.stages = res;
       }
     });
+  }
+
+  keyDownFunction(event) {
+    if (event.keyCode === 13) {
+      this.messages.push(this.newMessage);
+
+      this.newMessage = {
+        type: 'out',
+        content: ''
+      };
+    }
   }
 
 
