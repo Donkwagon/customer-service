@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StageEditorComponent implements OnInit {
 
+  editorContent: any;
   constructor() { }
 
   ngOnInit() {
+    this.editorContent = "sdf";
   }
 
 }

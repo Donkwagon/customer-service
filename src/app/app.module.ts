@@ -9,6 +9,8 @@ import { HashLocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { FroalaEditorModule, FroalaViewModule } from 'angular2-froala-wysiwyg';
+
 import { AppComponent } from './app.component';
 import { StageComponent } from './stage/stage.component';
 import { HomeComponent } from './home/home.component';
@@ -16,6 +18,8 @@ import { FlowComponent } from './flow/flow.component';
 import { StageNodeComponent } from './@shared/stage-node/stage-node.component';
 import { NewStageComponent } from './@shared/new-stage/new-stage.component';
 import { StageEditorComponent } from './@shared/stage-editor/stage-editor.component';
+import { CustomerComponent } from './customer/customer.component';
+import { CustomerStageComponent } from './customer-stage/customer-stage.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +29,17 @@ import { StageEditorComponent } from './@shared/stage-editor/stage-editor.compon
     FlowComponent,
     StageNodeComponent,
     NewStageComponent,
-    StageEditorComponent
+    StageEditorComponent,
+    CustomerComponent,
+    CustomerStageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy }
