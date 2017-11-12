@@ -26,6 +26,7 @@ export class AppComponent {
     this.flowService.createFlow(this.newFlow).then(res => {
       if (res) {
         console.log(res);
+        this.flows.push(res);
       }
     });
   }
@@ -37,5 +38,9 @@ export class AppComponent {
         this.flows = res;
       }
     });
+  }
+
+  toggleFlowEmergency() {
+    this.newFlow.emergency ? this.newFlow.emergency = false : this.newFlow.emergency = true;
   }
 }

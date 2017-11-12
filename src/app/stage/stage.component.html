@@ -1,7 +1,14 @@
 <div class="stage-wrapper" *ngIf="stage" >
     <h1>{{stage.name}}</h1>
     <p>{{stage.description}}</p>
-
+    <div class="entities c">
+        <div class="entities-title">ML Entities</div>
+        <div class="r wr">
+            <div class="entity">Luggage</div>
+            <div class="entity">Carry on</div>
+            <div class="entity">Banned Items</div>
+        </div>
+    </div>
     <app-stage-editor [stage]="stage"></app-stage-editor>
 
 </div>

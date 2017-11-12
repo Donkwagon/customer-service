@@ -6,6 +6,8 @@
       <h1 *ngIf="flow && !stage">{{flow.name}}</h1>
       <span>Air Canada</span>
     </div>
+    <div class="stage-content" [innerHTML]="stage.content">
+    </div>
     
     <a routerLink="/c/{{stage._id}}" class="stage-c c" *ngFor="let stage of stages">
       <span class="stage-title">
@@ -14,31 +16,27 @@
       <span class="stage-description">
         {{stage.description}}
       </span>
-      <div [innerHTML]="stage.content">
-      </div>
     </a>
-  
 
   </div>
   <div class="omni-channel-wrapper c">
-    <div class="msg-wrapper f1 c">
+    <div class="msg-wrapper f1 c ofys">
       <div class="msg msg-in r">
         <div class="rep-image">
           <img src="https://images.forbes.com/media/lists/companies/air-canada_416x416.jpg"/>
         </div>
         <div class="msg-content f1">
-            here is a piece of msg
+          How may I help you?
         </div>
       </div>
-      <div class="msg msg-out r">
+      <div class="msg r" [ngClass]="{'msg-out': msg.type == 'out', 'msg-in': msg.type == 'out'}" *ngFor="let msg of messages">
+        
+        <div class="rep-image" *ngIf="msg.type == 'in'">
+          <img src="https://images.forbes.com/media/lists/companies/air-canada_416x416.jpg"/>
+        </div>
         <div class="msg-content f1">
-            this is the message i sent
+            <a routerLink="{{msg.link}}">{{msg.content}}</a>
         </div>
-      </div>
-      <div class="msg msg-out" *ngFor="let msg of messages">
-          <div class="msg-content f1">
-              {{msg.content}}
-          </div>
       </div>
     </div>
     <div class="input-panel">

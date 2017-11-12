@@ -2,6 +2,7 @@
 
     <div class="content-wrapper c ofys">
         <div class="flow-thumb c" >
+            <span class="emergency emergency-selected" *ngIf="flow.emergency">Emergency Plan Flow</span>
             <span class="flow-title"><b>{{flow.name}}</b></span>
             <span class="flow-description">{{flow.description}}</span>
         </div>

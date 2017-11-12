@@ -216,3 +216,24 @@ form{
   color:blue;
   font-size:0.8rem;
 }
+
+
+.emergency{
+  padding:0.5rem 1rem;
+  color:grey;
+  align-self:flex-start;
+  font-size:0.8rem;
+  margin-bottom:0.5rem;
+  border-radius:3px;
+
+  &:hover{
+      cursor:pointer;
+      background-color:red;
+      color:black;
+  }
+}
+
+.emergency-selected{
+  background-color:red;
+  color:black;
+}

@@ -1,6 +1,7 @@
 <div class="app">
     <div class="content-wrapper c">
         <form class="c">
+            <span class="emergency" [ngClass]="{'emergency-selected': newFlow.emergency}" (click)="toggleFlowEmergency()">Emergency Plan Flow</span>
             <input class="app-input" [(ngModel)]="newFlow.name" placeholder="new custorm flow" name="flowName"/>
             <br>
             <textarea placeholder="flow description"   [(ngModel)]="newFlow.description" name="description" id="" cols="30" rows="10"></textarea>
@@ -10,6 +11,7 @@
         <div class="c">
             <a class="flow-thumb c" *ngFor="let flow of flows" routerLink="/f/{{flow._id}}">
                 <span class="thumb-title"><b>{{flow.name}}</b></span>
+                <span class="emergency emergency-selected" *ngIf="flow.emergency">Emergency</span>
                 <span class="thumb-description">{{flow.description}}</span>
             </a>
         </div>

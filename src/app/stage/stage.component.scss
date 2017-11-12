@@ -2,3 +2,20 @@
 .stage-wrapper{
     padding:0 2rem;
 }
+
+.entities{
+    border:#aaa solid 1px;
+    margin:0.5rem 0;
+
+    .entities-title{
+        padding:0.5rem 1rem;
+        font-weight:bold;
+    }
+
+    .entity{
+        padding:0.5rem 1rem;
+        background-color:#4EB3D3;
+        color:white;
+        margin:0.5rem;
+    }
+}

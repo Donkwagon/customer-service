@@ -23,6 +23,7 @@ export class CustomerStageComponent implements OnInit {
 
   newMessage: any;
   messages: any[];
+  scripted: any[];
 
   constructor(
     private route: ActivatedRoute,
@@ -36,6 +37,8 @@ export class CustomerStageComponent implements OnInit {
       this.getSubStages(this.stageId);
       this.messages = [];
     });
+
+    this.scripted = [];
   }
 
   ngOnInit() {
@@ -76,7 +79,29 @@ export class CustomerStageComponent implements OnInit {
 
   keyDownFunction(event) {
     if (event.keyCode === 13) {
+      const text = this.newMessage.content;
       this.messages.push(this.newMessage);
+      let response = null;
+
+      if ( text.includes('cancel') ) {
+        response = {
+          type: 'in',
+          content: 'Ok here is the information about flight cancellation',
+          link: '/c/5a0880a0b14d8814e75e4de0'
+        };
+      }
+
+      if ( text.includes('luggage') ) {
+        response = {
+          type: 'in',
+          content: 'Ok here is the link to luggage information',
+          link: '/c/5a08807db14d8814e75e4ddf'
+        };
+      }
+
+      if (response) {
+        this.messages.push(response);
+      }
 
       this.newMessage = {
         type: 'out',
