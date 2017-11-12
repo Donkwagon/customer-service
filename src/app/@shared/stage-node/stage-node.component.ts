@@ -14,10 +14,13 @@ export class StageNodeComponent implements OnInit {
   stage: Stage;
   stages: Stage[];
 
+  displayNewForm: boolean;
+
   constructor(
     private stageService: StageService
   ) {
     this.stages = [];
+    this.displayNewForm = false;
   }
 
   ngOnInit() {
@@ -30,6 +33,10 @@ export class StageNodeComponent implements OnInit {
         this.stages = res;
       }
     });
+  }
+
+  toggleForm() {
+    this.displayNewForm ? this.displayNewForm = false : this.displayNewForm = true;
   }
 
 }
