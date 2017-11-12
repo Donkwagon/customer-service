@@ -1,0 +1,11 @@
+<div class="stage-node c">
+    <a routerLink="/f/{{stage.flowId}}/{{stage._id}}">{{stage.name}}</a>
+    <span class="text-button" (click)="toggleForm()">+ new stage</span>
+    
+    
+    <app-new-stage *ngIf="displayNewForm" [parent]="stage"></app-new-stage>
+    
+    <div class="stages c">
+        <app-stage-node [stage]="stage" *ngFor="let stage of stages"></app-stage-node>
+    </div>
+</div>

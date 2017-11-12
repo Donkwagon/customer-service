@@ -1,0 +1,16 @@
+
+.flow-c{
+    padding:1rem;
+    background-color:white;
+    margin:0.5rem auto;
+    width:600px;
+    border-radius:7px;
+
+    .flow-title{
+        font-size:1.5rem;
+    }
+
+    &:hover{
+        cursor:pointer;
+    }
+}

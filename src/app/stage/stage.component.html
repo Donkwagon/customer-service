@@ -1,0 +1,7 @@
+<div class="stage-wrapper" *ngIf="stage" >
+    <h1>{{stage.name}}</h1>
+    <p>{{stage.description}}</p>
+
+    <app-stage-editor [stage]="stage"></app-stage-editor>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="page r" *ngIf="flow">
+
+    <div class="content-wrapper c ofys">
+        <div class="flow-thumb c" >
+            <span class="flow-title"><b>{{flow.name}}</b></span>
+            <span class="flow-description">{{flow.description}}</span>
+        </div>
+        <div class="stage-node c">
+            <app-stage-node *ngFor="let stage of stages" [stage]="stage"></app-stage-node>
+        </div>
+        <div class="stages c">
+            <app-new-stage [parent]="flow"></app-new-stage>
+        </div>
+    </div>
+    <div class="f1">
+        <router-outlet></router-outlet>
+    </div>
+</div>
